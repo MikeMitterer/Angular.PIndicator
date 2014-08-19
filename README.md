@@ -2,7 +2,7 @@ Quick demo for Angular Progress-Indicator
 -----------------------------------------
 Working Sample is [here](http://www.mikemitterer.at/fileadmin/sourcesamples/pindicator/)<br>
 
-[![Screenshot][1])](http://www.youtube.com/watch?v=vPfl-xPTjs0)
+![Screenshot][1]
 
 
 ###License###
