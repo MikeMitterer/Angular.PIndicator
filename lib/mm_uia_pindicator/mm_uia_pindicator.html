@@ -1,0 +1,35 @@
+<!-- pindicator.html -->
+<!DOCTYPE html>
+<style>
+    /**
+     * Attempt for Chrome-style progress-indicator with SVG and CSS animations
+     */
+
+    @-webkit-keyframes spin {
+        to {
+            stroke-dasharray: 0, 300, 50, 999;
+        }
+    }
+
+    @keyframes spin {
+        to {
+            stroke-dasharray: 0, 300, 50, 999;
+        }
+    }
+
+    .pindicator circle {
+        fill: none;
+        stroke-width: 16;
+        stroke-linecap: round;
+        stroke-dasharray: 0, 0, 50, 999;
+
+        -webkit-animation: spin 3s infinite linear;
+        animation: spin 3s infinite linear;
+    }
+
+</style>
+<svg class="pindicator" viewBox="0 0 100 100">
+    <!-- Wird hier noch mal um 90G nach links gedreht -->
+    <circle cx="50" cy="50" r="42" transform="rotate(-90,50,50)" />
+</svg>
+<content></content>

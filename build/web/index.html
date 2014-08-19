@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="packages/angular_pindicator/styles/flexbox/css/flexbox.css">
+    <link rel="stylesheet" type="text/css" href="packages/angular_pindicator/styles/flexbox/css/debug.css">
+    <link rel="stylesheet" type="text/css" href="packages/angular_pindicator/styles/angular/css/angular.css">
+
+    <link rel="stylesheet" href="packages/angular_pindicator/styles/application/css/application.css">
+    <style>
+        .fb-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .fb-child {
+            margin: 1em;  /* Magic! */
+            border-radius: 5px;
+            border: 1px solid #808080;
+            padding: 1em;
+            flex-grow: 1;
+        }
+
+        .color-pindicator::shadow .pindicator circle,
+        .color-pindicator .pindicator circle {
+            stroke: #0000ff;
+        }
+    </style>
+</head>
+<body >
+<header>
+    <nav class="navbar navbar-inverse" role="navigation">
+    </nav>
+</header>
+<section id="middle">
+    <main id="main">
+        <div class="container">
+            <article class="sample">
+                <h1>Angular - Progress-Indicator</h1>
+
+                <div class="well fb-container">
+                    <div class="fb-child">
+                        <h3>Default (50px + slategray)</h3>
+                        <pindicator/>
+                    </div>
+                    <div class="fb-child">
+                        <h3>4em + Green</h3>
+                        <pindicator size="4em" color="#00ff00"/>
+                    </div>
+                    <div class="fb-child">
+                        <h3>1em + Red</h3>
+                        <pindicator color="red" size="1em"/>
+                    </div>
+                    <div class="fb-child">
+                        <h3>2em + CSS-Color</h3>
+                        <pindicator class="color-pindicator" size="2em"/>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</section>
+<footer class="navbar navbar-inverse">
+    <a href="#">Footer</a>
+</footer>
+<script type="application/dart" src="main.dart"></script>
+<script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>
