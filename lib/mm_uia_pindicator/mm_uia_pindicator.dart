@@ -1,6 +1,7 @@
 library webapp_base_ui_angular.mm_uia_pindicator;
 
 import 'dart:html' as html;
+import "dart:svg";
 
 import "package:angular/angular.dart";
 import 'package:angular/core/annotation_src.dart';
@@ -32,10 +33,9 @@ class ProgressIndicatorModule extends Module {
 /// ProgressIndicatorComponent-Componente
 @Component(
     selector: 'pindicator', 
-    publishAs: 'cmp',
-    useShadowDom: false,
+    useShadowDom: true,
     //applyAuthorStyles: true, 
-    templateUrl: 'packages/angular_pindicator/mm_uia_pindicator/mm_uia_pindicator.html' /* ,
+    templateUrl: 'mm_uia_pindicator.html' /* ,
     cssUrl: 'packages/webapp_base_ui_angular/mm_uia_pindicator/mm_uia_pindicator.css' */ ) 
 // @formatter:on    
 class ProgressIndicatorComponent  implements ShadowRootAware {
@@ -44,10 +44,10 @@ class ProgressIndicatorComponent  implements ShadowRootAware {
     String _size = "50";
     String _color = "slategray";
 
-    final html.Element _element;
+    final html.Element _component;
 
-    ProgressIndicatorComponent(this._element) {
-        Validate.notNull(_element);
+    ProgressIndicatorComponent(this._component) {
+        Validate.notNull(_component);
     }
 
     @NgAttr("size")
@@ -68,14 +68,15 @@ class ProgressIndicatorComponent  implements ShadowRootAware {
 
     /// Das abfragen der size mit {{cmp.size}} produziert immer eine Fehlermeldung in den DevTools
     void onShadowRoot(html.ShadowRoot shadowRoot) {
-        final svg = shadowRoot.querySelector(".pindicator");
+        final SvgElement svg = shadowRoot.querySelector(".pindicator");
+        _logger.info("onShadowRoot SVG: $svg");
         if(svg != null) {
             svg.setAttribute("width",size);
             svg.setAttribute("height",size);
 
             svg.setAttribute("style","stroke: $color");
 
-            _logger.info("Color: ${_element.style.color}");
+            _logger.info("Color: ${_component.style.color}, Size: $size");
         }
     }
 

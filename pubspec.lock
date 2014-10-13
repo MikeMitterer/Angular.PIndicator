@@ -4,11 +4,11 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.18.0"
+    version: "0.15.7"
   angular:
     description: angular
     source: hosted
-    version: "0.13.0"
+    version: "1.0.0"
   args:
     description: args
     source: hosted
@@ -16,7 +16,7 @@ packages:
   barback:
     description: barback
     source: hosted
-    version: "0.14.0+3"
+    version: "0.14.2"
   browser:
     description: browser
     source: hosted
@@ -36,7 +36,7 @@ packages:
   di:
     description: di
     source: hosted
-    version: "2.0.2"
+    version: "3.3.1"
   html5lib:
     description: html5lib
     source: hosted
@@ -44,7 +44,7 @@ packages:
   intl:
     description: intl
     source: hosted
-    version: "0.8.10+4"
+    version: "0.11.9"
   logging:
     description: logging
     source: hosted
@@ -53,10 +53,10 @@ packages:
     description: logging_handlers
     source: hosted
     version: "0.8.0"
-  meta:
-    description: meta
+  observe:
+    description: observe
     source: hosted
-    version: "0.8.8"
+    version: "0.10.1+2"
   path:
     description: path
     source: hosted
@@ -65,10 +65,22 @@ packages:
     description: perf_api
     source: hosted
     version: "0.0.9"
+  petitparser:
+    description: petitparser
+    source: hosted
+    version: "1.2.2"
+  pool:
+    description: pool
+    source: hosted
+    version: "1.0.1"
   route_hierarchical:
     description: route_hierarchical
     source: hosted
-    version: "0.4.22"
+    version: "0.5.0"
+  smoke:
+    description: smoke
+    source: hosted
+    version: "0.1.0+1"
   source_maps:
     description: source_maps
     source: hosted
@@ -80,11 +92,7 @@ packages:
   stack_trace:
     description: stack_trace
     source: hosted
-    version: "0.9.3+2"
-  typed_mock:
-    description: typed_mock
-    source: hosted
-    version: "0.0.4"
+    version: "1.0.2"
   utf:
     description: utf
     source: hosted
@@ -93,7 +101,3 @@ packages:
     description: validate
     source: hosted
     version: "1.3.1"
-  web_components:
-    description: web_components
-    source: hosted
-    version: "0.3.5+1"

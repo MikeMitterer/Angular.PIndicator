@@ -6,13 +6,13 @@
      */
 
     @-webkit-keyframes spin {
-        to {
+        100% {
             stroke-dasharray: 0, 300, 50, 999;
         }
     }
 
     @keyframes spin {
-        to {
+        100% {
             stroke-dasharray: 0, 300, 50, 999;
         }
     }
@@ -27,9 +27,26 @@
         animation: spin 3s infinite linear;
     }
 
+    /*.pindicator.lightdom {*/
+        /*width: 50px;*/
+        /*height: 50px;*/
+    /*}*/
+
+    /*.pindicator.lightdom  {*/
+        /*stroke: slategray;*/
+        /*width: 50px;*/
+        /*height: 50px;*/
+    /*}*/
+
+    .pindicator.test {
+        width: 100px;
+        height: 100px;
+        stroke: red;
+    }
+
 </style>
-<svg class="pindicator" viewBox="0 0 100 100">
-    <!-- Wird hier noch mal um 90G nach links gedreht -->
+<svg class="pindicator lightdom" viewBox="0 0 100 100" style="width: 1em; height: 1em;">
+    <!-- Wird hier noch mal um 90G nach links gedreht, 91G für FireFox -->
     <circle cx="50" cy="50" r="42" transform="rotate(-90,50,50)" />
 </svg>
 <content></content>
